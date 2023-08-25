@@ -1,28 +1,31 @@
 #include "lists.h"
-/*****
- * Author - Samuel, Doghor
- * print_list - This functio prints out all the elements of a list_t list
+
+/****
+ * print_list - This function prints out all the elements of a list_t list.
  * @h: singly linked list.
  * Return: total number of elements in the list.
- * ****/
+ */
+
+/* Samuel Doghor */
 
 size_t print_list(const list_t *h)
 {
-	size_t x;
+    size_t x;
 
-	x = 0;
+    x = 0;
 
-	while (h != NULL)
-	{
-		if (h->str == NULL)
-			printf("[d%] %s\n", 0, "(nil)");
-		else
-			printf("[d%] %s\n", h->len, h->str);
+    while (h != NULL)
+    {
+        if (h->str == NULL)
+            printf("[0] (nil)");
+        else
+            printf("[%d] %s\n", h->len, h->str);
 
-		h = h->next;
+        x++;
 
-		x
-	}
+        h = h->next;
+    }
 
-	return (x);
+    return (x);
 }
+
