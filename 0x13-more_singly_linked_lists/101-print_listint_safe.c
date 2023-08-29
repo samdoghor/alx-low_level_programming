@@ -16,14 +16,16 @@ size_t print_listint_safe(const listint_t *head)
 		difference = head - head->next;
 		safe++;
 		printf("[%p] %d\n", (void *)head, head->n);
+
 		if (difference > 0)
 			head = head->next;
 		else
 		{
 			printf("-> [%p] %d\n", (void *)head->next,
 					head->next->n);
-			break;
+			exit(98);
 		}
 	}
+
 	return (safe);
 }
