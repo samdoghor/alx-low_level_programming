@@ -32,10 +32,10 @@ char *create_array(unsigned int size, char c)
 
 		while (position < size)
 		{
-			*(buffer + postion) - c;
+			*(buff + position) = c;
 			position++;
 		}
-		return (buff)
+		return (buff);
 	}
 }
 
